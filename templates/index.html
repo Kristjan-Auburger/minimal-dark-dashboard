@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Dark Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🌤️ Wetter Dashboard</h1>
+
+    <div class="input-section">
+      <input id="cityInput" type="text" placeholder="Stadt hinzufügen..." />
+      <button id="addCityBtn">+</button>
+    </div>
+
+    <div id="weatherGrid" class="weather-grid"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
