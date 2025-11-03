@@ -32,10 +32,13 @@ def get_weather():
 
     data = response.json()
 
+    # Nur benötigte Felder weiterreichen, inkl. Wind und Sonnenzeiten
     weather = {
         "name": data["name"],
         "main": data["main"],
-        "weather": data["weather"]
+        "weather": data["weather"],
+        "wind": data.get("wind", {}),
+        "sys": data.get("sys", {}),
     }
 
     return jsonify(weather)
